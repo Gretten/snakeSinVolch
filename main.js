@@ -29,10 +29,8 @@ function draw() {
   if (canvas.getContext) {
 	var ctx = canvas.getContext('2d');
   
-	ctx.fillStyle="white";
+	ctx.fillStyle="gray";
 	ctx.fillRect(0, 0, 150, 150);
-	// ctx.strokeRect(50,50,50,50);
-	console.log("canvas is successed found");
 
 	// field
 		// for
@@ -46,7 +44,9 @@ function draw() {
 		// snake
 		ctx.fillRect(snake_head[0]*cell_size, 
 					 snake_head[1]*cell_size, 
-					 snake_head[0]*cell_size + cell_size, 
-					 snake_head[1]*cell_size + cell_size);
+					(snake_head[0] + 1)*cell_size, 
+					(snake_head[1] + 1)*cell_size);
+					 
+	console.log("x1: " + snake_head[0]*cell_size + " x2: " + (snake_head[0] + 1)*cell_size);
   }
 }
