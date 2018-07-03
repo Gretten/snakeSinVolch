@@ -10,14 +10,15 @@ var
 	// cell size (visible width)
 	// colors...
 
-setInterval(draw, 1000);
+setInterval(compute, 1000);
 
+function compute() {
 // while true
 	// if key pressed
 		// change direction
 	// step
-	// draw
-	// pause
+	draw();
+}
 
 function draw() {
   var canvas = document.getElementById('canvas');
