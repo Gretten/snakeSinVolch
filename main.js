@@ -13,12 +13,33 @@ var
 setInterval(compute, 1000);
 
 function compute() {
-// while true
-	// if key pressed
-		// change direction
+	// if snake meet wall or self
+	// if food
+
+	// todo: 
+	// if key pressed		
+	var key = 0; 
+	
+	// change direction
+	if (key == 37) // left
+		direction = 0;
+	else if (key == 38)
+		direction = 1;	
+	else if (key == 39)
+		direction = 2;	
+	else if (key == 40)
+		direction = 3;	
+		
 	// step
 	// case direction
+	if (direction == 0) // left
+		snake_head[0] -= 1;
+	else if (direction == 1) // up
+		snake_head[1] -= 1;
+	else if (direction == 2) // right
 		snake_head[0] += 1;
+	else if (direction == 3) // down
+		snake_head[1] += 1;
 	
 	draw();
 }
