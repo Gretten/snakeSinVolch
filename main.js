@@ -1,3 +1,4 @@
+// volching is not allowed there
 // game vars
 // field sizes (height/width)
 // snake_array
