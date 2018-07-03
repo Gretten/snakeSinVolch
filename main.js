@@ -1,13 +1,13 @@
 // game vars
 var
-	field_size = [15, 15];
+	field_size = [15, 15],
 	// snake_array
-	// snake_head
-	// snake_direction
+	snake_head = [0, 3],
+	snake_direction = 0,
 	// food_pos
 
 // graphic vars
-	// cell size (visible width)
+	cell_size = 10;
 	// colors...
 
 setInterval(compute, 1000);
@@ -17,6 +17,9 @@ function compute() {
 	// if key pressed
 		// change direction
 	// step
+	// case direction
+		snake_head[0] += 1;
+	
 	draw();
 }
 
@@ -24,20 +27,26 @@ function draw() {
   var canvas = document.getElementById('canvas');
   
   if (canvas.getContext) {
-	// ctx.clearRect(45,45,60,60);
+	var ctx = canvas.getContext('2d');
+  
+	ctx.fillStyle="white";
+	ctx.fillRect(0, 0, 150, 150);
 	// ctx.strokeRect(50,50,50,50);
 	console.log("canvas is successed found");
-  
-    var ctx = canvas.getContext('2d');
 
 	// field
 		// for
 			// for
 			
 	// food
-	ctx.fillRect(25, 25, 100, 100);
+	// ctx.fillRect(25, 25, 100, 100);
 
+	ctx.fillStyle="black";
 	// for
 		// snake
+		ctx.fillRect(snake_head[0]*cell_size, 
+					 snake_head[1]*cell_size, 
+					 snake_head[0]*cell_size + cell_size, 
+					 snake_head[1]*cell_size + cell_size);
   }
 }
